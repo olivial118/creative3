@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Economica|Kaushan+Script|Nanum+Pen+Script" rel="stylesheet">
+    <title>Movie Ratings</title>
+  </head>
+  <body>
+    <h1>&#9889; Movie Ratings &#9889;</h1>
+    <br>
+
+
+      <div id="MazeRunner" class="movie">
+      <div id="photo">
+        <p><img id="poster" src="https://bloximages.newyork1.vip.townnews.com/ocolly.com/content/tncms/assets/v3/editorial/0/bd/0bd23dd6-0493-11e8-bb74-671e5debec55/5a6e77b1d5a12.image.jpg" alt="Maze Runner: The Death Cure"></p>
+      </div>
+
+      <div id="rating">
+        <h2>Maze Runner: The Death Cure</h2>
+        <h3>Ratings</h3>
+        <star-rating @rating-selected = "addRating" :increment="0.5" :show-rating="false" inactive-color="#e1bad9" active-color="#cc1166" v-model="rating"></star-rating>
+        <p>Average Rating: {{this.averageRating[this.number]}}</p>
+      </div>
+
+      <div id="comment">
+        <br><br><br>
+        <h3>Commments</h3>
+        <form v-on:submit.prevent="addComment">
+          <textarea v-model="addedComment" placeholder="Please leave your comment!"></textarea>
+          <button id="button" type="submit">Comment</button>
+        </form>
+        <div v-for="comment in comments[number]">
+          <hr>
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="TheGreatestShowman" class="movie">
+      <div id="photo">
+        <p><img id="poster" src="https://www.caltimes.org/wp-content/uploads/2018/01/TGS-poster.jpg" alt="The Greatest Showman"></p>
+      </div>
+
+      <div id="rating">
+        <h2>The Greatest Showman</h2>
+        <h3>Ratings</h3>
+        <star-rating @rating-selected = "addRating" :increment="0.5":show-rating="false" inactive-color="#e1bad9" active-color="#cc1166" v-model="rating"></star-rating>
+        <p>Average Rating: {{this.averageRating[this.number]}}</p>
+      </div>
+
+      <div id="comment">
+        <br><br><br>
+        <h3>Commments</h3>
+        <form v-on:submit.prevent="addComment">
+          <textarea v-model="addedComment" placeholder="Please leave your comment!"></textarea>
+          <button id="button" type="submit">Comment</button>
+        </form>
+        <div v-for="comment in comments[number]">
+          <hr>
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="StarWars" class="movie">
+      <div id="photo">
+        <p><img id="poster" src="http://assets.nydailynews.com/polopoly_fs/1.3676324.1515327614!/img/httpImage/image.jpg_gen/derivatives/gallery_1200/star-wars-jedi-2017.jpg" alt="Star Wars"></p>
+      </div>
+
+      <div id="rating">
+        <h2>Star Wars</h2>
+        <h3>Ratings</h3>
+        <star-rating @rating-selected = "addRating" :increment="0.5" :show-rating="false" inactive-color="#e1bad9" active-color="#cc1166" v-model="rating"></star-rating>
+        <p>Average Rating: {{this.averageRating[this.number]}}</p>
+      </div>
+
+      <div id="comment">
+        <br><br><br>
+        <h3>Commments</h3>
+        <form v-on:submit.prevent="addComment">
+          <textarea v-model="addedComment" placeholder="Please leave your comment!"></textarea>
+          <button id="button" type="submit">Comment</button>
+        </form>
+        <div v-for="comment in comments[number]">
+          <hr>
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div  id="Martian" class="movie">
+      <div id="photo">
+        <p><img id="poster" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSkTXecwYMz979SqqDV_Su9G1jhnvAFCNWmY1Fu8zVNTHhxNFj9w" alt="Martian"></p>
+      </div>
+
+      <div id="rating">
+        <h2>Martian</h2>
+        <h3>Ratings</h3>
+        <star-rating @rating-selected = "addRating" :increment="0.5" :show-rating="false" inactive-color="#e1bad9" active-color="#cc1166" v-model="rating"></star-rating>
+        <p>Average Rating: {{this.averageRating[this.number]}}</p>
+      </div>
+
+      <div id="comment">
+        <br><br><br>
+        <h3>Commments</h3>
+        <form v-on:submit.prevent="addComment">
+          <textarea v-model="addedComment" placeholder="Please leave your comment!"></textarea>
+          <button id="button" type="submit">Comment</button>
+        </form>
+        <div v-for="comment in comments[number]">
+          <hr>
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="BeautyAndTheBeast" class="movie">
+      <div id="photo">
+        <p><img id="poster" src="https://media1.popsugar-assets.com/files/thumbor/k9EQEclsOfq_jPchOYiw-pqXFz0/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/01/26/813/n/1922283/b9d2a864d3eebc97_BeautyAndTheBeast577e6c66dc01c/i/Beauty-Beast-2017-Movie-Posters.png" alt="Beauty and the Beast"></p>
+      </div>
+
+      <div id="rating">
+        <h2>Beauty and the Beast</h2>
+        <h3>Ratings</h3>
+        <star-rating @rating-selected = "addRating" :increment="0.5" :show-rating="false" inactive-color="#e1bad9" active-color="#cc1166" v-model="rating"></star-rating>
+        <p>Average Rating: {{this.averageRating[this.number]}}</p>
+      </div>
+
+      <div id="comment">
+        <br><br><br>
+        <h3>Commments</h3>
+        <form v-on:submit.prevent="addComment">
+          <textarea v-model="addedComment" placeholder="Please leave your comment!"></textarea>
+          <button id="button" type="submit">Comment</button>
+        </form>
+        <div v-for="comment in comments[number]">
+          <hr>
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="Mummy" class="movie">
+      <div id="photo">
+        <p><img id="poster" src="https://cdn.shopify.com/s/files/1/1402/3931/products/mummyuv_ff1b6f3b-79c6-4dd3-9573-debd7c4ec62d_1024x1024.jpg?v=1504277252" alt="Mummy"></p>
+      </div>
+
+      <div id="rating">
+        <h2>Mummy</h2>
+        <h3>Ratings</h3>
+        <star-rating @rating-selected = "addRating" :increment="0.5" :show-rating="false" inactive-color="#e1bad9" active-color="#cc1166" v-model="rating"></star-rating>
+        <p>Average Rating: {{this.averageRating[this.number]}}</p>
+      </div>
+
+      <div id="comment">
+        <br><br><br>
+        <h3>Commments</h3>
+        <form v-on:submit.prevent="addComment">
+          <textarea v-model="addedComment" placeholder="Please leave your comment!"></textarea>
+          <button id="button" type="submit">Comment</button>
+        </form>
+        <div v-for="comment in comments[number]">
+          <hr>
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="IT" class="movie">
+      <div id="photo">
+        <p><img id="poster" src="https://images-na.ssl-images-amazon.com/images/I/61bMkkwpduL._SY550_.jpg" alt="IT"></p>
+      </div>
+
+      <div id="rating">
+        <h2>IT</h2>
+        <h3>Ratings</h3>
+        <star-rating @rating-selected = "addRating" :increment="0.5" :show-rating="false" inactive-color="#e1bad9" active-color="#cc1166" v-model="rating"></star-rating>
+        <p>Average Rating: {{this.averageRating[this.number]}}</p>
+      </div>
+
+      <div id="comment">
+        <br><br><br>
+        <h3>Commments</h3>
+        <form v-on:submit.prevent="addComment">
+          <textarea v-model="addedComment" placeholder="Please leave your comment!"></textarea>
+          <button id="button" type="submit">Comment</button>
+        </form>
+        <div v-for="comment in comments[number]">
+          <hr>
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="Okja" class="movie">
+      <div id="photo">
+        <p><img id="poster" src="http://lwlcdn.lwlies.com/wp-content/uploads/2017/11/Okja-900x0-c-default.jpg" alt="Okja"></p>
+      </div>
+
+      <div id="rating">
+        <h2>Okja</h2>
+        <h3>Ratings</h3>
+        <star-rating @rating-selected = "addRating" :increment="0.5" :show-rating="false" inactive-color="#e1bad9" active-color="#cc1166" v-model="rating"></star-rating>
+        <p>Average Rating: {{this.averageRating[this.number]}}</p>
+      </div>
+
+      <div id="comment">
+        <br><br><br>
+        <h3>Commments</h3>
+        <form v-on:submit.prevent="addComment">
+          <textarea v-model="addedComment" placeholder="Please leave your comment!"></textarea>
+          <button id="button" type="submit">Comment</button>
+        </form>
+        <div v-for="comment in comments[number]">
+          <hr>
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="WonderWoman" class="movie">
+      <div id="photo">
+        <p><img id="poster" src="https://img06.mgo-images.com/image/thumbnail?id=MMVF14E1623D8F71695DE246FF24061A3762&ql=70&sizes=310x465" alt="Wonder Woman"></p>
+      </div>
+
+      <div id="rating">
+        <h2>Wonder Woman</h2>
+        <h3>Ratings</h3>
+        <star-rating @rating-selected = "addRating" :increment="0.5" :show-rating="false" inactive-color="#e1bad9" active-color="#cc1166" v-model="rating"></star-rating>
+        <p>Average Rating: {{this.averageRating[this.number]}}</p>
+      </div>
+
+      <div id="comment">
+        <br><br><br>
+        <h3>Commments</h3>
+        <form v-on:submit.prevent="addComment">
+          <textarea v-model="addedComment" placeholder="Please leave your comment!"></textarea>
+          <button id="button" type="submit">Comment</button>
+        </form>
+        <div v-for="comment in comments[number]">
+          <hr>
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+    <script src="/script.js"></script>
+
+  </body>
+  <footer>
+    <p id="foot"><a href= "https://github.com/olivial118/creative3">GitHub Repository</a></p>
+  </footer>
+</html>
+

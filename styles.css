@@ -1,0 +1,79 @@
+#photo {grid-area: photo;}
+#rating {grid-area: rating;}
+#comment {grid-area: comment;}
+#foot {grid-area: foot;}
+#app {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    'MazeRunner'
+    'TheGreatestShowman'
+    'StarWars'
+    'Martian'
+    'BeautyAndTheBeast'
+    'Mummy'
+    'IT'
+    'Okja'
+    'WonderWoman';
+}
+
+
+.movie {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    'photo rating comment'
+    'foot foot foot';
+}
+
+#poster {
+  width: 320px;
+  height: 450px;
+}
+#button {
+  height: 26px;
+  font-size: 18px;
+  font-family: 'Economica', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Nanum Pen Script', cursive;
+}
+h2 {
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+}
+body {
+    font-family: 'Economica', sans-serif;
+    font-size: 20px;
+    padding: 10px 100px 10px 100px;
+    background: #92C5F2;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+}
+
+body {
+   background-image: url("http://cfile25.uf.tistory.com/image/231AB34B564834C024D22D");
+   background-size: cover;
+   background-color: #cccccc;
+   text-align: center;
+}
+
+#foot {
+  text-align: center;
+  text-decoration: overline;
+  color: black;
+  font-family: 'Economica', sans-serif;
+  font-size: 20px;
+}
+
